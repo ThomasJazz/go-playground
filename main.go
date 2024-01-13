@@ -13,7 +13,7 @@ import (
 
 const (
 	maxConcurrentRequests = 100
-	port                  = 80
+	port                  = 8080
 )
 
 type Payload struct {
