@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-playground
+  labels:
+    app: go-playground
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-playground
+  template:
+    metadata:
+      labels:
+        app: go-playground
+    spec:
+      containers:
+      - name: go-server
+        image: thomasjazz/go-playground:v1.0
+        ports:
+        - containerPort: 8080
